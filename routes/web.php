@@ -20,3 +20,5 @@ Route::get('tests/{test}', 'TestsController@show');
 Route::get('tests/create/{valveID}', 'TestsController@create');
 Route::post('tests/create/{valve}', 'TestsController@store');
 Route::post('search', 'ValveController@search');
+Route::get('certificate/{valve}', 'ValveController@certificate');
+Route::get('/declaration', 'ValveController@declaration');
