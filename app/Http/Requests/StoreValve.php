@@ -25,6 +25,7 @@ class StoreValve extends FormRequest
     public function rules()
     {
         return [
+            'serial' => 'required',
             'opening_pressure' => 'required',
             'opening_vacuum' => 'required',
             'unit' => 'required',
