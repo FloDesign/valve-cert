@@ -163,4 +163,18 @@ class ValveController extends Controller
             return redirect('/valves')->with('error', 'No valve with that serial could be find');
         }
     }
+
+    public function certificate($valve)
+    {
+        $valveObj = $this->valve->findBySerial($valve);
+
+        if ($valveObj instanceof Valve) {
+            return view('tests.certificate', ['valve' => $valveObj, 'test' => $valveObj->tests->last()]);
+        }
+    }
+
+    public function declaration()
+    {
+        return view('tests.declaration');
+    }
 }
