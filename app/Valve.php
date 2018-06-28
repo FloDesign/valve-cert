@@ -45,11 +45,7 @@ class Valve extends Model
 
     public function storeValve($data)
     {
-        $valve = self::create();
-
-        $valve->serial = $this->generateSerial($valve->id);
-
-        $valve->save();
+        $valve = self::create($data);
 
         $valve->tests()->create([
             'opening_pressure' => $data['opening_pressure'],
