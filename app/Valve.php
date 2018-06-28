@@ -77,7 +77,7 @@ class Valve extends Model
         return $valve->delete();
     }
 
-    private function generateSerial($id)
+    public function generateSerial()
     {
         $baseYear = Carbon::create(2018, 1, 1, 0, 0, 0, 'Europe/London');
         $yearDiff = $baseYear->diffInYears();

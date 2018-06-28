@@ -46,7 +46,9 @@ class ValveController extends Controller
     public function create()
     {
         if (Auth::check()) {
-            return view('valves.create');
+            $serial = $this->valve->generateSerial();
+
+            return view('valves.create', ['serial' => $serial]);
         }
 
         return redirect('/valves')->with('status', 'You must be logged in as Admin to add a valve');
