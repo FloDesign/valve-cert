@@ -42,8 +42,18 @@ class TestsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreTest $request)
     {
+        $data = $request->validated();
+        $valve = $this->valve->findBySerial($data['serial']);
+
+        $test = $this->test->storeTest($data, $valve);
+
+        if ($test instanceof Test) {
+            return redirect("/valves/{$test->valve->serial}")->with('status', 'Test created successfully');
+        }
+
+        return redirect("/tests/create/{$data['serial']}")->withInput($data)->with('error', 'Something went wrong when creating the valve');
     }
 
     /**
