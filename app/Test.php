@@ -11,6 +11,7 @@ class Test extends Model
         'opening_vacuum',
         'unit',
         'notes',
+        'valve_id',
     ];
 
     public function valve()
