@@ -4,14 +4,19 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Valve;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\StoreTest;
+use App\Test;
 
 class TestsController extends Controller
 {
     protected $valve;
+    protected $test;
 
-    public function __construct(Valve $valve)
+    public function __construct(Valve $valve, Test $test)
     {
         $this->valve = $valve;
+        $this->test = $test;
     }
 
     /**
