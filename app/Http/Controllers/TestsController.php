@@ -26,7 +26,13 @@ class TestsController extends Controller
      */
     public function create($valve)
     {
-        $valve = $this->valve->findBySerial($valve);
+        if (Auth::check()) {
+            $valve = $this->valve->findBySerial($valve);
+
+            return view('tests.create', ['valve' => $valve]);
+        }
+
+        return redirect('/valves')->with('status', 'You must be logged in as Admin to create a test');
     }
 
     /**
