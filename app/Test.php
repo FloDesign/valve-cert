@@ -26,8 +26,9 @@ class Test extends Model
             'opening_vacuum' => $data['opening_vacuum'],
             'unit' => $data['unit'],
             'notes' => $data['notes'],
+            'valve_id' => $valve->id,
         ]);
 
-        return $valve->tests()->associate($test);
+        return $test->load('valve');
     }
 }
