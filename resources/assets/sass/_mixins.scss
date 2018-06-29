@@ -1,0 +1,39 @@
+// Strip units from values
+@function strip-unit($num) {
+    @return $num / ($num * 0 + 1);
+}
+  
+// Calculate ems from pixels
+@function calc-em($px, $base: 16) {
+    $px: strip-unit($px);
+    $base: strip-unit($base);
+    @if $px == 1 {
+        @return 0.0725rem;
+    }
+    @return ($px / $base) * 1rem;
+}
+  
+// Media Queries
+@mixin breakpoint($point) {
+    @if $point == bp-xl {
+    @media screen and (min-width: $bp-xlarge) { @content ; }
+    }
+    @else if $point == bp-l {
+    @media screen and (min-width: $bp-large) { @content ; }
+    }
+    @else if $point == bp-m {
+    @media screen and (min-width: $bp-medium) { @content ; }
+    }
+    @else if $point == bp-s {
+    @media screen and (min-width: $bp-small)  { @content ; }
+    }
+    @else if $point == bp-xs {
+        @media screen and (min-width: $bp-xsmall)  { @content ; }
+    }
+    @else if $point == bp-s-max {
+        @media screen and (max-width: $bp-small)  { @content ; }
+    }
+    @else if $point == bp-m-max {
+        @media screen and (max-width: $bp-medium)  { @content ; }
+    }
+}

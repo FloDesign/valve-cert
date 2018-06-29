@@ -1,0 +1,35 @@
+
+
+.btn{
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    transition: 0.3s;
+    cursor: pointer;
+    padding: 0 20px;
+    &--primary{
+        background: $color-brand-green;
+        border: 1px solid $color-brand-green;
+        color: $color-white;
+        @include breakpoint(bp-m){
+            &:hover{
+                background: $color-white;
+                color: $color-brand-green;
+            }
+        }
+        
+    }
+    &--secondary{
+        background: $color-white;
+        color: $color-brand-green;
+    }
+    &--sm{
+        line-height: 40px;
+        font-size: calc-em(16px);
+    }
+    &--lg{
+        line-height: 50px;
+        font-size: calc-em(18px);
+    }
+}

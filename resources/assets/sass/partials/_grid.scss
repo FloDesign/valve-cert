@@ -1,0 +1,162 @@
+// Layout grid stuff ------------------------
+
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 0 calc-em(20px);
+
+    &--sm{
+        max-width: 704px;
+        margin: 0 auto;
+        @include breakpoint(bp-m){
+            width: 704px;
+        }
+        @include breakpoint(bp-xl){
+            margin: 0 0 0 16.6%; 
+            
+        }
+    }
+
+    &--sm-center{
+        max-width: 704px;
+        margin: 0 auto;
+    }    
+}
+
+
+
+.grid{
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 0 calc-em(-33px);
+    &--sm{
+        margin-left: 16.6%;
+        max-width: 704px;
+    }
+}
+
+.cell{
+    flex:  0 1 100%;
+    box-sizing: border-box;
+    padding: 0 0 0 calc-em(33px);
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    &-8{
+        &-s{
+            @include breakpoint(bp-s){
+                flex-basis: 66.666%;
+                max-width: 66.666%;
+            } 
+        }
+        &-m{
+            @include breakpoint(bp-m){
+                flex-basis: 66.666%;
+                max-width: 66.666%;
+            }
+        }
+        &-l{
+            @include breakpoint(bp-l){
+                flex-basis: 66.666% !important;
+                max-width: 66.666%;
+            }
+        }
+    }
+
+    &-6{
+        &-s{
+            @include breakpoint(bp-s){
+                flex-basis: 50%;
+                max-width: 50%;
+            }
+        }
+        &-m{
+            @include breakpoint(bp-m){
+                flex-basis: 50%;
+                max-width: 50%;
+            }
+        }
+    }
+
+    &-4{
+        &-s{
+            @include breakpoint(bp-s){
+                flex-basis: 33.333%;
+                max-width: 33.333%;
+            } 
+        }
+        &-m{
+            @include breakpoint(bp-m){
+                flex-basis: 33.333%;
+                max-width: 33.333%;
+            }
+        }
+
+        &-l{
+            @include breakpoint(bp-l){
+                flex-basis: 33.333%;
+                max-width: 33.333%;
+            }
+        }
+    }
+
+   
+
+    
+
+    &-center{
+        &-m{
+            @include breakpoint(bp-m){
+                align-items: center;
+            }
+        }
+    }
+
+    &-right{
+        &-m{
+            @include breakpoint(bp-m){
+                justify-content: flex-end;
+            }
+        }
+    }
+
+    &-justify-mob{
+        justify-content: space-between;
+        @include breakpoint(bp-m){
+            justify-content: flex-start;
+        }
+    }
+
+    &-offset{
+        &-2{
+            &-s{
+                @include breakpoint(bp-s){
+                    margin-left: 16.6%;
+                }
+            }
+            &-m{
+                @include breakpoint(bp-m){
+                    margin-left: 16.6%;
+                }
+            }
+            &-l{
+                @include breakpoint(bp-l){
+                    margin-left: 16.6%;
+                }
+            }
+        }
+    }
+
+    &-bp{
+        padding: 0 0 calc-em(20px) calc-em(33px);
+        @include breakpoint(bp-m){
+            padding: 0 0 calc-em(33px) calc-em(33px);
+        }
+    }
+
+    &-no-max{
+        max-width: none;
+    }
+}
