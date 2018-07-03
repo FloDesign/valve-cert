@@ -1,0 +1,33 @@
+body{
+    background: $color-grey-1;
+}
+
+.box{
+    background: $color-white;
+    border-radius: 3px;
+    border: 1px solid $color-grey-2;
+    max-width: 950px;
+    margin: 0 auto;
+    p{
+        max-width: 600px;
+    }
+
+    @include breakpoint(bp-m){
+        margin-bottom: 50px;
+        padding: 50px;
+        &--inline{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            h2{
+                margin: 0;
+            }
+        }
+    }
+
+    &--sm{
+        max-width: 560px;
+    }
+
+
+}

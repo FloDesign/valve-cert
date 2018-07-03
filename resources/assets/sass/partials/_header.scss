@@ -1,0 +1,29 @@
+.app-header{
+    padding: 20px 0;
+    background: $color-white;
+    @include breakpoint(bp-m){
+        margin-bottom: 100px;
+    }
+
+    &__logo{
+        display: block;
+        width: 140px;
+        height: 40px;
+       background-image: url(/img/ff3d-logo.svg);
+    }
+
+    &__usr{
+        display: flex;
+        align-items: center;
+        color: $color-grey-4;
+        .btn{
+            margin-left: 20px;
+        }
+    }
+
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

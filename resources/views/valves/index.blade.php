@@ -2,13 +2,19 @@
 
 @section('content')
 <div class="container">
-    <h2>Create new Valve</h2>
-    <a href="/valves/create">Add new valve</a>
-    <h2>Find a Valve</h2>
-    <p>Enter the valve serial number below. The valve number can be found on the valve box or inscribed onto the top of the valve</p>
-    {!! Form::open(['url' => 'search']) !!}
-    {!! Form::text('search', '', ['placeholder' => 'Valve number e.g. A1023']) !!}
-    {{Form::submit('Find')}}
-    {!! Form::close() !!}
+
+    <div class="box box--inline">
+        <h2>Create new Valve</h2>
+        <a href="/valves/create" class="btn btn--primary btn--lg">Add new valve</a>
+    </div>
+    
+    <div class="box">
+        <h2>Find a Valve</h2>
+        <p class="intro-text">Enter the valve serial number below. The valve serial number can be found on the valve box or inscribed onto the top of the valve &amp; will be a letter followed by 4 digits.</p>
+        {!! Form::open(['url' => 'search']) !!}
+        {!! Form::text('search', '', ['placeholder' => 'Valve number e.g. A1023', 'class' => 'standard-input']) !!}
+        {{Form::submit('Find', ['class' => 'btn btn--primary btn--lg'])}}
+        {!! Form::close() !!}
+    </div>
 </div>
 @endsection
