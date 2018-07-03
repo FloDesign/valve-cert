@@ -2,7 +2,47 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
+
+    <div class="box box--sm">
+
+        <div class="box__header">
+            <h2>{{ __('Reset Password') }}</h2>
+        </div>
+
+        @if (session('status'))
+            <div class="alert alert-success" role="alert">
+                {{ session('status') }}
+            </div>
+        @endif
+
+        <form method="POST" action="{{ route('password.email') }}" aria-label="{{ __('Reset Password') }}">
+            @csrf
+           
+
+
+            <div class="standard-input-container">
+                <label for="email">{{ __('E-Mail Address') }}</label>
+    
+                <input id="email" type="email" class="standard-input form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
+
+                @if ($errors->has('email'))
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $errors->first('email') }}</strong>
+                    </span>
+                @endif
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--lg">
+            {{ __('Send Password Reset Link') }}
+            </button>
+        </form>
+
+    </div>
+
+
+
+
+    <!-- <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Reset Password') }}</div>
@@ -42,6 +82,6 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 </div>
 @endsection

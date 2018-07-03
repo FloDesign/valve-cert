@@ -8,9 +8,10 @@
     transition: 0.3s;
     cursor: pointer;
     padding: 0 20px;
+    border: 1px solid $color-brand-green;
     &--primary{
         background: $color-brand-green;
-        border: 1px solid $color-brand-green;
+       
         color: $color-white;
         @include breakpoint(bp-m){
             &:hover{
@@ -23,6 +24,12 @@
     &--secondary{
         background: $color-white;
         color: $color-brand-green;
+        @include breakpoint(bp-m){
+            &:hover{
+                background: $color-brand-green;
+                color: $color-white;
+            }
+        }
     }
     &--sm{
         line-height: 40px;
@@ -31,5 +38,11 @@
     &--lg{
         line-height: 50px;
         font-size: calc-em(18px);
+    }
+}
+
+.btn-pair{
+    .btn{
+        margin-right: 20px;
     }
 }

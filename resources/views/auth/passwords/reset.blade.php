@@ -2,6 +2,36 @@
 
 @section('content')
 <div class="container">
+
+    <div class="box box--sm">
+
+        <div class="box__header">
+            <h2>{{ __('Reset Password') }}</h2>
+        </div>
+
+        <form method="POST" action="{{ route('password.request') }}" aria-label="{{ __('Reset Password') }}">
+            @csrf
+            <input type="hidden" name="token" value="{{ $token }}">
+
+
+            <div class="standard-input-container">
+                <label for="email">{{ __('E-Mail Address') }}</label>
+                <input id="email" type="email" class="standard-input form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ $email ?? old('email') }}" required autofocus>
+
+                @if ($errors->has('email'))
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $errors->first('email') }}</strong>
+                    </span>
+                @endif
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--lg">
+                {{ __('Reset Password') }}
+            </button>
+        </form>
+    
+    </div>
+
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">

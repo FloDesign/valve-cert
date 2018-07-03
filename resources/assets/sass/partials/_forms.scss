@@ -7,5 +7,32 @@
     font-weight: 100;
     width: 100%;
     margin-bottom: 50px;
-    color: $color-brand-green;
+    color: $color-grey-4;
+}
+
+.standard-input-container{
+    label{
+        color: $color-brand-green;
+        margin-bottom: 10px;
+        display: block;
+    }
+
+
+    &--radio{
+        margin-bottom: 50px;
+    }
+
+    input[type="radio"]{
+
+    }
+}
+
+.standard-radio{
+    display: inline-block;
+    margin-right: 10px;
+    color: $color-brand-blue;
+}
+
+.radio-set{
+    margin-top: 20px;
 }
