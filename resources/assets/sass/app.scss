@@ -2,7 +2,9 @@
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
 
-// Variables
+
+
+@media screen {
 @import 
     "normalize",
     "config",
@@ -10,6 +12,14 @@
     "partials/global",
     "partials/grid",
     "partials/forms",
-    "partials/typography",
+    "partials/typography",  
     "partials/buttons",
     "partials/header";
+}
+
+@media print{
+    @import
+        "config",
+        "mixins",
+        "print";
+}
