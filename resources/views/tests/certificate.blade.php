@@ -10,7 +10,7 @@
             <h2>{{$valve->serial}} Test Certificate</h2>
             <div class="box__header__helpertxt">
                 Pressure/Vacuume Breather Vent PV-80-E
-            </div> 
+            </div>
         </div>
 
         <div class="box__section valve-data">
@@ -40,7 +40,7 @@
                 <div class="cell cell-4-m">
                     <div class="data">
                         <div class="data__label">Actual Relief vacuum</div>
-                        <div class="data__info">-{{$test->opening_vacuum}}kPa</div>
+                        <div class="data__info">{{$test->opening_vacuum}}kPa</div>
                     </div>
                 </div>
                 <div class="cell cell-4-m">
@@ -53,14 +53,14 @@
         </div>
 
         <div class="box__section text-section">
-            <p>We certify that the valve with the above serial number was tested and passed the following production acceptance tests.</p> 
+            <p>We certify that the valve with the above serial number was tested and passed the following production acceptance tests.</p>
 
             <ul>
-                <li>Relieving Pressure is as stated above</li> 
-                <li>Relieving Vacuum is as stated above</li>   
-                <li>Leak tightness test verified up to Relief Pressure</li> 
-                <li>Leak tightness test verified up to Relief Vacuum</li> 
-                <li>Overturn leak tightness test verified at 28 kPa (90, 180 and 270 degrees from the vertical).</li> 
+                <li>Relieving Pressure is as stated above</li>
+                <li>Relieving Vacuum is as stated above</li>
+                <li>Leak tightness test verified up to Relief Pressure</li>
+                <li>Leak tightness test verified up to Relief Vacuum</li>
+                <li>Overturn leak tightness test verified at 28 kPa (90, 180 and 270 degrees from the vertical).</li>
             </ul>
 
             <p>
