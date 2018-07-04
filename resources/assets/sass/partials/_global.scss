@@ -1,74 +1,73 @@
-body{
+body {
     background: $color-grey-1;
 }
 
-.box{
+.box {
     background: $color-white;
     border-radius: 3px;
     border: 1px solid $color-grey-2;
     max-width: 950px;
     margin: 0 auto;
     box-sizing: border-box;
-    p{
+    p {
         max-width: 600px;
     }
 
-    @include breakpoint(bp-m){
+    @include breakpoint(bp-m) {
         margin-bottom: 50px;
         padding: 50px;
-        &--inline{
+        &--inline {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            h2{
+            h2 {
                 margin: 0;
             }
         }
     }
 
-    &--sm{
+    &--sm {
         max-width: 560px;
     }
 
-    &__header{
+    &__header {
         border-bottom: 1px solid $color-grey-2;
         padding-bottom: 40px;
         margin-bottom: 50px;
-        &__helpertxt{
+        &__helpertxt {
             margin-bottom: 10px;
         }
 
-        &--valve{
-            @include breakpoint(bp-m){
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
+        &--valve {
+            @include breakpoint(bp-m) {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
             }
         }
     }
-
 }
 
-.valve-data{
+.valve-data {
     margin-bottom: 50px;
 }
 
-.valve-actions{
+.valve-actions {
     border-bottom: 1px solid $color-grey-3;
     padding-bottom: 50px;
-    @include breakpoint(bp-m){
+    @include breakpoint(bp-m) {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 }
 
-.valve-dates{
-    &__first{
+.valve-dates {
+    &__first {
         text-align: right;
         margin-bottom: 10px;
     }
-    &__last{
+    &__last {
         font-size: calc-em(36px);
         color: $color-brand-blue;
         font-weight: 300;
@@ -76,125 +75,116 @@ body{
     }
 }
 
-.data{
+.data {
     border-bottom: 1px solid $color-grey-3;
     width: 100%;
-    &__label{
+    &__label {
         color: $color-brand-green;
     }
-    &__info{
+    &__info {
         font-size: calc-em(36px);
         color: $color-brand-blue;
         font-weight: 100;
         margin-top: 20px;
         padding-bottom: 10px;
-        &--vac{
-            &:before{
-                content: "-";
-            }
-        }
     }
 }
 
-.valve-actions{
+.valve-actions {
     margin-top: 50px;
 }
 
-.test-list{
+.test-list {
     padding: 0;
 }
 
-.table-row{
+.table-row {
     display: flex;
     padding: 10px 0 10px 10px;
     border-bottom: 1px solid $color-grey-2;
     font-weight: 400;
     color: $color-brand-blue;
-    &:nth-child(2n+2){
+    &:nth-child(2n + 2) {
         background: $color-grey-1;
     }
-    &--header{
+    &--header {
         color: $color-grey-4;
         padding: 10px 0;
         border-bottom: 1px solid $color-grey-4;
-
     }
-
 }
 
-.table-cell{
-    &--date{
+.table-cell {
+    &--date {
         width: 17%;
     }
-    &--open{
+    &--open {
         width: 18%;
     }
-    &--close{
+    &--close {
         width: 18%;
     }
-    &--unit{
+    &--unit {
         width: 17%;
     }
-    &--notes{
+    &--notes {
         width: 30%;
     }
 }
 
-dl.valve-info{
+dl.valve-info {
     border-bottom: 1px solid $color-grey-2;
     padding-bottom: 10px;
     margin: 0;
-    dt, dd{
+    dt,
+    dd {
         margin: 0;
     }
-    dt{
+    dt {
         display: inline-block;
         margin-bottom: 5px;
-
     }
-    dd{
+    dd {
         color: $color-brand-blue;
         margin-bottom: 20px;
     }
-
 }
 
-.text-section{
+.text-section {
     padding: 50px 0 30px 0;
     border-bottom: 1px solid $color-grey-2;
-    p{
+    p {
         max-width: none;
         color: $color-brand-blue;
     }
 
-    ul{
+    ul {
         color: $color-brand-blue;
         padding-left: 20px;
         margin: 0 0 40px 0;
-        li{
+        li {
             margin-bottom: 10px;
         }
     }
 }
 
-.sig-section{
+.sig-section {
     padding: 50px 0 30px 0;
     border-bottom: 1px solid $color-grey-2;
 }
 
-ul.name-date{
+ul.name-date {
     list-style: none;
     padding: 0;
     margin: 0;
     color: $color-brand-blue;
     margin-top: 20px;
-    li{
+    li {
         margin-bottom: 10px;
     }
 }
 
-
-.alert{
+.alert {
     max-width: 950px;
     position: absolute;
     top: 101px;
@@ -203,13 +193,12 @@ ul.name-date{
     padding: 20px;
     margin: 0 auto;
     box-sizing: border-box;
-    &-success{
-        background: #CFEEE6;
-        color: #10AC84;
+    &-success {
+        background: #cfeee6;
+        color: #10ac84;
     }
-    &-error{
-        background: #FCDCDD;
-        color: #EE5253;
+    &-error {
+        background: #fcdcdd;
+        color: #ee5253;
     }
 }
-
