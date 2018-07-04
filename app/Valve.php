@@ -7,7 +7,7 @@ use Carbon\Carbon;
 
 class Valve extends Model
 {
-    protected $baseYearLetter = 'A';
+    protected $baseYearLetter = 'B';
 
     protected $fillable = [
         'serial',
