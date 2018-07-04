@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'PV80') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -32,7 +32,7 @@
                         <a class="btn btn--primary btn--sm" href="{{ route('login') }}">{{ __('Login') }}</a>
                     </div>   -->
                 @else
-                    
+
                     <div class="app-header__usr">
                         <div class="usr-name">Hello {{ Auth::user()->name }}</div>
 
@@ -46,10 +46,10 @@
                             @csrf
                         </form>
                     </div>
-                        
-                    
+
+
                 @endguest
-                
+
             </div>
         </header>
 
