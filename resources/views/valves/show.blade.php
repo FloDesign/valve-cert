@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="box">
-    
+
     <div class="box__header box__header--valve">
         <h1>{{$valve->serial}}</h1>
 
@@ -19,7 +19,7 @@
                 <div class="data">
                     <div class="data__label">Opening Pressure</div>
                     <div class="data__info"> {{$valve->tests->last()->opening_pressure}}</div>
-                   
+
                 </div>
             </div>
             <div class="cell cell-4-m">
@@ -32,7 +32,7 @@
             <div class="cell cell-4-m">
                 <div class="data">
                     <div class="data__label">Unit</div>
-                    <div class="data__info">{{$valve->tests->last()->unit}}</div> 
+                    <div class="data__info">{{$valve->tests->last()->unit}}</div>
                 </div>
             </div>
         </div>
@@ -75,11 +75,11 @@
             <div class="table-cell table-cell--date">
                 {{$test->created_at->format('d-m-Y')}}
             </div>
-            <div class="table-cell table-cell--open">    
+            <div class="table-cell table-cell--open">
                 {{$test->opening_pressure}}
             </div>
             <div class="table-cell table-cell--close">
-                -{{$test->opening_vacuum}}
+                {{$test->opening_vacuum}}
             </div>
             <div class="table-cell table-cell--unit">
                 {{$test->unit}}
