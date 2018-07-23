@@ -104,11 +104,13 @@
                 {{$test->notes}}
             </div>
 
+            @auth
             <div class="table-cell table-cell--delete">
                 {{ Form::model($test, ['route' => ['tests.destroy', $test->id], 'method' => 'delete']) }}
                 {{ Form::submit('Delete Test') }}
                 {{ Form::close() }}
             </div>
+            @endauth
         </li>
         @endforeach
         @endif
