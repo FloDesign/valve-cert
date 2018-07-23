@@ -76,5 +76,16 @@ class TestsController extends Controller
      */
     public function destroy($test)
     {
+        try {
+            if (Auth::check()) {
+                $valveID = $test->valve->serial;
+                $testObj = $this->test->findOrFail($test);
+                $testObj->delete();
+
+                return redirect("/valves/{$valveID}")->with('status', 'Test successfully deleted');
+            }
+        } catch (Exception $e) {
+            return redirect("/valves/{$valveID}")->with('error', $e);
+        }
     }
 }
