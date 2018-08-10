@@ -115,11 +115,6 @@
         @endforeach
         @endif
         </ul>
-        @auth
-    {{Form::model($valve, ['route' => ['valves.destroy', $valve->serial], 'method' => 'delete'])}}
-    {{Form::submit('Delete Valve')}}
-    {{Form::close()}}
-    @endauth
     </div>
 
     </div>

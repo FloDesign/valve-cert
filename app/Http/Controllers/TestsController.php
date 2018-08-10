@@ -78,9 +78,10 @@ class TestsController extends Controller
     {
         try {
             if (Auth::check()) {
+                $test = $this->test->find($test);
                 $valveID = $test->valve->serial;
                 $testObj = $this->test->findOrFail($test);
-                $testObj->delete();
+                $testObj[0]->delete();
 
                 return redirect("/valves/{$valveID}")->with('status', 'Test successfully deleted');
             }

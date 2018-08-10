@@ -19,6 +19,11 @@ class Test extends Model
         return $this->belongsTo('App\Valve');
     }
 
+    public function getTestByUuid($id)
+    {
+        return $this->where('uuid', '=', $id)->firstOrFail();
+    }
+
     public function storeTest($data, Valve $valve)
     {
         $test = self::create([
