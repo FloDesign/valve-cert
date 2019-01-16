@@ -78,13 +78,13 @@ class Valve extends Model
         $baseYear = Carbon::create(2018, 1, 1, 0, 0, 0, 'Europe/London');
         $yearDiff = $baseYear->diffInYears();
         $yearLetter = $this->baseYearLetter;
-
-        $valvesInYear = $this->inYear($yearLetter) + 1;
-
+        
         for ($i = 0; $i < $yearDiff; ++$i) {
             ++$yearLetter;
         }
-
+        
+        $valvesInYear = $this->inYear($yearLetter) + 1;
+        
         return $yearLetter.sprintf('%04d', $valvesInYear);
     }
 }
