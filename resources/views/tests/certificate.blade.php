@@ -64,10 +64,10 @@
             </ul>
 
             <p>
-            All test procedures were carried out in accordance with EN14595:2005 and EN12972:2007 Section 5.10
+            All test procedures were carried out in accordance with EN14595:2005 and EN12972:2018 Section 5.10
             </p>
 
-            <p>This valve was built and tested under ISO 9002 :2008.  Registration No, QAIC/UK/302.</p>
+            <p>This valve was built and tested under ISO 9002:2008.  Registration No, QAIC/UK/302.</p>
         </div>
 
         <div class="valve-actions">
